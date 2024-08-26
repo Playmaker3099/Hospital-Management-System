@@ -12,7 +12,7 @@ namespace Hospital_Management_System
 
         public DateTime Time { get; set; }
         public bool booking {  get; set; }
-        //public int consult;
+        public int Consultfee { get; set; }
         public Appointment(int price, DateTime time) 
         {
             Price = price;
@@ -43,7 +43,7 @@ namespace Hospital_Management_System
         public virtual int CalculateBill(int price, int consult) 
         {
             Price = price;
-            
+            Consultfee = consult;
 
             int result = price + consult;
 
